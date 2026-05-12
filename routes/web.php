@@ -35,6 +35,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/hannia', function () {
     return view('hannia');
+});
 
 Route::get('/mauricio', [MauricioController::class, 'index']);
 Route::get('/fatima', function () {
