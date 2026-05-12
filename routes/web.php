@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
-use App\Http\Controllers\NeyserController;
 
+use App\Http\Controllers\MauricioController;
+use App\Http\Controllers\NeyserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,6 +35,8 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/hannia', function () {
     return view('hannia');
+
+Route::get('/mauricio', [MauricioController::class, 'index']);
 Route::get('/fatima', function () {
     return view('fatima');
 });
